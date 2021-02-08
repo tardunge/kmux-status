@@ -1,6 +1,8 @@
 # kmux-status
 tmux status-lline plugin to render kube-context and other indicators
 
+![demo](assets/kcontext.png)
+
 # Features
 - Adds kube-context with namespace to the status-line.
 
@@ -28,7 +30,7 @@ Reload configuration, then press `prefix` + `I` to install plugin.
 
 ```tmux
 # in .tmux.conf
-set -g status-right '#{@kmux-kcontext-icon} #{kcontext}'
+set-option -g status-right '#{@kmux-kcontext-icon} #{kcontext}'
 ```
 
 # Customization
@@ -36,7 +38,8 @@ set -g status-right '#{@kmux-kcontext-icon} #{kcontext}'
 Here are available options with their default values:
 
 ```tmux
-@kmux-kcontext-icon "⎈"
+# in .tmux.conf
+set-option -g @kmux-kcontext-icon "⎈"
 ```
 
 # License

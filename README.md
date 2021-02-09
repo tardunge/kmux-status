@@ -1,7 +1,7 @@
 # kmux-status
 tmux status-line plugin to render kube-context and pod-name indicators.
 
-![demo](assets/kcontext.png)
+![demo](assets/kmux-demo.gif)
 
 # Features
 - Adds kube-context with namespace to the status-line.
@@ -9,6 +9,7 @@ tmux status-line plugin to render kube-context and pod-name indicators.
   * If you do kubectl `exec` -it pod.
   * If you are tailing `logs`(obviously with -f) for a pod.
   * If you are `port-forwarding` to a pod.
+- Shows the full command tree for the current pane.
 
 # Installation
 
@@ -46,6 +47,14 @@ set-option -g status-right '#{kpod}'
 ```
 
 These (`#{kcontext}` and `#{kpod}`) are the two available formats supported now.
+
+To see the full command which is being executed in the current pane, press `prefix` + `G`. You will be taken to copy mode to the generated output.
+
+```bash
+-+= 65725 manojbabu -zsh
+ \--= 73635 manojbabu kubectl port-forward --namespace default stg-metabase 8080:3000
+```
+Useful to keep track of ssh-tunnels.
 
 # Customization
 

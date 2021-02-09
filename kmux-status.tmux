@@ -2,7 +2,7 @@
 
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$CURRENT_DIR/scripts/helpers.sh"
-# tmux bind-key T run-shell "$CURRENT_DIR/scripts/kpod.sh"
+tmux bind-key G run-shell "$CURRENT_DIR/scripts/pane_command.sh"
 
 render_status_line() {
   local placeholder="\#{$1}"

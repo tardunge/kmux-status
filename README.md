@@ -12,7 +12,7 @@ tmux status-line plugin to render kube-context and pod-name indicators.
 
 # Installation
 
-If you are using zsh and tmux with kubecontext rendered on your prompt, but you deal with one kube-context at a time accross terminals, while rotating contexts over time, then it makes sense to have the kubecontext indicated on tmux status-line rather than having it rendered across all your terminal prompts. Incase, if you use different contexts within the scope of different shells, then you need to tap into the shell env to extract the context(it makes more sense to have it rendered in your prompt itself for this scenario).
+If you are using zsh and tmux with kubecontext rendered on your prompt, but you deal with one kube-context at a time accross terminals, while rotating contexts over time, then imo it makes sense to have the kubecontext indicated on tmux status-line rather than having it rendered across all your terminal prompts. Incase, if you use different contexts within the scope of different shells, then you need to tap into the shell env to extract the context(it makes more sense to have it rendered in your prompt itself for this scenario).
 
 ## Requirements
 
